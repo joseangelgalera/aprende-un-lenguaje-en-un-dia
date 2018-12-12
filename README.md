@@ -28,7 +28,7 @@ Para añadir colaboradores hay que hacer click en la pestaña *Settings* y selec
 
 Escribe aquí los miembros del grupo. El primero es el representante o encargado.
 
-* [Galera García, José Ángel](https://github.com/joseangelgalera)
+* [Galera García, José Ángel](https://github.com/joseangelgalera) (El Generalísimo)
 * [Haller Ríos, Lino](https://github.com/LinoHallerRios)
 * [Sevilla Ruiz, Borja](https://github.com/bsevrui)
 
@@ -38,7 +38,7 @@ El profesor llevará una cajita llena de papelitos con los nombres de distintos 
 
 Escribe el lenguaje de programación elegido por el grupo.
 
-* Mi lenguaje
+* Ruby
 
 Los papelitos se han recortado de este [documento](lenguajes_de_programacion.pdf).
 
