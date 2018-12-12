@@ -50,6 +50,8 @@ Ruby es un lenguaje de programación interpretado, reflexivo y orientado a objet
 
 Se ha utilizado [Visual Studio Code](https://code.visualstudio.com/) y [Online Ruby Compiler](https://www.tutorialspoint.com/execute_ruby_online.php)
 
+----> https://repl.it/@LinoHaller/Aprende-un-lenguaje-en-un-dia
+
 
 También hemos considerado interesante comentar [Ruby on Rails](https://rubyonrails.org/)
 
