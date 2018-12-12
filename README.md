@@ -48,7 +48,7 @@ Ruby es un lenguaje de programación interpretado, reflexivo y orientado a objet
 
 ## Herramientas de desarrollo
 
-Se ha utilizado [Visual Studio Code]
+Se ha utilizado [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Poniendo en práctica el lenguaje
 
