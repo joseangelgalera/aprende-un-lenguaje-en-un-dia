@@ -71,8 +71,8 @@ class String
   def green; "\e[32m#{self}\e[0m" end
 end
 
-puts "\nPinto una pirámide de asteriscos con la altura que quieras."
-print "Introduce la altura de la pirámide: "
+puts "\nEste Pequeño Programa en Ruby pinta por pantalla una pirámide con la altura deseada."
+print "Introduce una altura: "
 $h = Integer(gets)
 $altura = 1
 $espacios = ($h - 1)
