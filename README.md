@@ -122,26 +122,24 @@ end
 Realiza un programa que rellene un array (o una estructura similar) con 20 números enteros aleatorios entre 1 y 100 y que seguidamente los muestre por pantalla. A continuación, se deben pasar los números primos a las primeras posiciones del array y los no primos a las posiciones restantes. Muestra finalmente el array resultado.
 
 ```Ruby
-# Estilos output
-
 class String
   def bold; "\e[1m#{self}\e[22m" end
   def underline; "\e[4m#{self}\e[24m" end
 end
 
-# Declaracion de arrays 
+# Se definen los Arrays
 
 numeros = []
 numPrimos = []
 numNoPrimos = []
 
-# Este bucle almacena los 20 números aleatorios en el array 'numeros' y lo muestra por pantalla
+# Usamos un bucle para almacenar los números que se han generado de forma aleatoria y lo saca por pantalla
 
 $i = 0
 $num = 20
 $indice = 0;
 
-puts "\nArray original".bold.underline
+puts "\nArray Base".bold.underline
 print "┌────────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬"
 puts "─────┬─────┬─────┬─────┬─────┬─────┬─────┐"
 print "│ Indice "
@@ -153,7 +151,7 @@ end
 
 print "│\n├────────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼"
 puts "─────┼─────┼─────┼─────┼─────┼─────┼─────┤"
-print "│ Valor  "
+print "│ Valores  "
 
 while $i < $num  do
   numeros[$i] = rand(100) + 1
@@ -164,7 +162,7 @@ end
 print "│\n└────────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴"
 puts "─────┴─────┴─────┴─────┴─────┴─────┴─────┘"
 
-# Comprueba si el número es primo o no 
+# Verifica si el número es primo o no
 
 $j = 0
 
@@ -186,7 +184,7 @@ while $j < $num  do
     $primo = false
   end
   
-  # Si el número es primo lo almacena en el array 'numPrimos', si no es primo en 'numNoPrimos' 
+  # Si el resultado es que el número es primo lo guarda en el array correspondiente, y al resto (no primos) los almacena también en su propio Array
   
   if $primo
     numPrimos[$p] = numeros[$j]
@@ -200,7 +198,8 @@ while $j < $num  do
 end
 
 
-# Une los dos arrays en el original, 'numeros', colocando primero los primos 
+# Sobreescribe el array de los numeros primos y posteriormente el array de los no primos sobre el array original
+
 $k = 0
 
 while $k < $p  do
@@ -218,11 +217,11 @@ end
 
 $m = 0
 
-# Muestra el array 'numeros' con los primos primero 
+# Saca por pantalla el nuevo array, que contiene la clasificación
 
 $indice = 0;
 
-puts "\nArray con primos primero".bold.underline
+puts "\nArray Final".bold.underline
 print "┌────────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬"
 puts "─────┬─────┬─────┬─────┬─────┬─────┬─────┐"
 print "│ Indice "
