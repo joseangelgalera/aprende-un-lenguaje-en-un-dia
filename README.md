@@ -28,9 +28,9 @@ Para añadir colaboradores hay que hacer click en la pestaña *Settings* y selec
 
 Escribe aquí los miembros del grupo. El primero es el representante o encargado.
 
-* Alan Brito
-* Elba Lazo
-* Esteban Quito
+* [Galera García, José Ángel](https://github.com/joseangelgalera)
+* [Haller Ríos, Lino](https://github.com/LinoHallerRios)
+* [Sevilla Ruiz, Borja](https://github.com/bsevrui)
 
 ## Lenguaje de programación
 
