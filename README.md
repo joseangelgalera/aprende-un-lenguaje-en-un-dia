@@ -1,5 +1,3 @@
-<div style="text-align: right">
-
 # Aprende un lenguaje de programación en un día (ejercicio voluntario para subir nota).
 
 ## Introducción
@@ -50,7 +48,7 @@ Ruby es un lenguaje de programación interpretado, reflexivo y orientado a objet
 
 ## Herramientas de desarrollo
 
-Indica aquí qué software has tenido que instalar para programar en este lenguaje. Añade enlaces y/o capturas de pantalla.
+Se ha utilizado [Visual Studio Code]
 
 ## Poniendo en práctica el lenguaje
 
@@ -79,5 +77,3 @@ Cada equipo explicará al resto de la clase lo aprendido durante la realización
 * Los miembros del equipo más votado ganarán un premio.
 
 :star: Si te ha gustado este ejercicio, dale una estrellita al [repositorio original](https://github.com/LuisJoseSanchez/aprende-un-lenguaje-en-un-dia).
-
-</div>
