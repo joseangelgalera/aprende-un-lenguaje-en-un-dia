@@ -1,4 +1,4 @@
-<p align="justify">
+<div style="text-align: right">
 
 # Aprende un lenguaje de programación en un día (ejercicio voluntario para subir nota).
 
@@ -80,4 +80,4 @@ Cada equipo explicará al resto de la clase lo aprendido durante la realización
 
 :star: Si te ha gustado este ejercicio, dale una estrellita al [repositorio original](https://github.com/LuisJoseSanchez/aprende-un-lenguaje-en-un-dia).
 
-</p>
+</div>
