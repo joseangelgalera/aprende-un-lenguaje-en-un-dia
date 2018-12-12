@@ -105,20 +105,14 @@ end
 Realiza un programa que rellene un array (o una estructura similar) con 20 números enteros aleatorios entre 1 y 100 y que seguidamente los muestre por pantalla. A continuación, se deben pasar los números primos a las primeras posiciones del array y los no primos a las posiciones restantes. Muestra finalmente el array resultado.
 
 ```Ruby
-# Estilos output
-
 class String
   def bold; "\e[1m#{self}\e[22m" end
   def underline; "\e[4m#{self}\e[24m" end
 end
 
-# Declaracion de arrays 
-
 numeros = []
 numPrimos = []
 numNoPrimos = []
-
-# Este bucle almacena los 20 números aleatorios en el array 'numeros' y lo muestra por pantalla
 
 $i = 0
 $num = 20
@@ -147,8 +141,6 @@ end
 print "│\n└────────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴"
 puts "─────┴─────┴─────┴─────┴─────┴─────┴─────┘"
 
-# Comprueba si el número es primo o no 
-
 $j = 0
 
 $p = 0
@@ -169,7 +161,6 @@ while $j < $num  do
     $primo = false
   end
   
-  # Si el número es primo lo almacena en el array 'numPrimos', si no es primo en 'numNoPrimos' 
   
   if $primo
     numPrimos[$p] = numeros[$j]
@@ -183,7 +174,6 @@ while $j < $num  do
 end
 
 
-# Une los dos arrays en el original, 'numeros', colocando primero los primos 
 $k = 0
 
 while $k < $p  do
@@ -200,8 +190,6 @@ while $p < $num  do
 end
 
 $m = 0
-
-# Muestra el array 'numeros' con los primos primero 
 
 $indice = 0;
 
