@@ -59,7 +59,7 @@ Pon en práctica el lenguaje de programación realizando los siguientes ejercici
 Realiza un programa que muestre por pantalla la frase **¡Hola mundo!**.
 
 ```Ruby
-    puts "¡Hola Mundo!";
+puts "¡Hola Mundo!";
 ````
 
 ### 2. Pirámide
@@ -81,15 +81,11 @@ puts
 
 while $altura <= $h do
   
-  # Pinta espacios
-  
   $i = 0
   while $i < $espacios
     print " "
     $i +=1
   end
-  
-  # Pinta los asteriscos
   
   $j = 1
   while $j < $altura * 2
