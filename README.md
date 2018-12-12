@@ -65,7 +65,7 @@ Realiza un programa que muestre por pantalla la frase **¡Hola mundo!**.
 ```Ruby
 puts "Hola Mundo"
 ````
-(Screen Shot 12-12-18 at 06.07 PM.png)
+(Screen Shot 12-12-18 at 06.07 PM.PNG)
 
 ### 2. Pirámide
 
