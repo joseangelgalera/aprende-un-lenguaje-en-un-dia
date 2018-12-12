@@ -103,17 +103,17 @@ end
 Segunda Forma simplificada: 
 
 ```Ruby
-print "Ingrese el tamaño de la piramide: "
+print "Por favor, introduzca la altura de la pirámide: "
 altura = gets.chomp.to_i
 
 caracter = "*"
-valor = caracter
+aux = caracter
 
 for i in 1..altura
 
-  puts " " * (altura - i) + valor
-  valor += caracter * 2
-
+  puts " " * (altura - i) + aux
+  aux += caracter * 2
+  
 end
 ```
 
