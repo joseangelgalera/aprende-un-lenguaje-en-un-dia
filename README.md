@@ -63,7 +63,7 @@ Pon en práctica el lenguaje de programación realizando los siguientes ejercici
 Realiza un programa que muestre por pantalla la frase **¡Hola mundo!**.
 
 ```Ruby
-puts "¡Hola Mundo!";
+puts "Hola Mundo"
 ````
 
 ### 2. Pirámide
@@ -71,7 +71,50 @@ puts "¡Hola Mundo!";
 Dada una altura introducida por el usuario, realiza un programa que pinte una pirámide a base de asteriscos con la altura indicada.
 
 ```Ruby
+print "Por favor, introduzca la altura de la pirámide: "
+alturaIntroducida = gets.chomp.to_i
 
+planta = 1
+longitudDeLinea = 1
+espacios = alturaIntroducida - 1
+
+while planta <= alturaIntroducida 
+
+  
+  for i in 1..espacios
+    print " "
+  end
+
+  
+  for i in 1..longitudDeLinea
+    print "*"
+  end
+
+  puts ""
+
+  planta+=1
+  espacios-=1
+  longitudDeLinea += 2
+
+end
+```
+
+
+Segunda Forma simplificada: 
+
+```Ruby
+print "Ingrese el tamaño de la piramide: "
+altura = gets.chomp.to_i
+
+caracter = "*"
+valor = caracter
+
+for i in 1..altura
+
+  puts " " * (altura - i) + valor
+  valor += caracter * 2
+
+end
 ```
 
 ### 3. Arrays y números aleatorios
