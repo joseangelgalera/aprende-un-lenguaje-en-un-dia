@@ -122,126 +122,125 @@ end
 Realiza un programa que rellene un array (o una estructura similar) con 20 números enteros aleatorios entre 1 y 100 y que seguidamente los muestre por pantalla. A continuación, se deben pasar los números primos a las primeras posiciones del array y los no primos a las posiciones restantes. Muestra finalmente el array resultado.
 
 ```Ruby
-class String
-  def bold; "\e[1m#{self}\e[22m" end
-  def underline; "\e[4m#{self}\e[24m" end
-end
-
-# Se definen los Arrays
-
 numeros = []
 numPrimos = []
 numNoPrimos = []
 
-# Usamos un bucle para almacenar los números que se han generado de forma aleatoria y lo saca por pantalla
 
-$i = 0
-$num = 20
-$indice = 0;
+i = 0
+num = 20
+indice = 0;
 
-puts "\nArray Base".bold.underline
-print "┌────────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬"
-puts "─────┬─────┬─────┬─────┬─────┬─────┬─────┐"
-print "│ Indice "
-
-while $indice < $num  do
-  printf "│%4d ", $indice
-  $indice +=1
+puts ""
+puts ""
+while i < num/2
+  numeros[i] = rand(100) + 1
+  printf "│%4d ",  numeros[i]
+  i +=1
 end
 
-print "│\n├────────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼"
-puts "─────┼─────┼─────┼─────┼─────┼─────┼─────┤"
-print "│ Valor  "
+puts ""
 
-while $i < $num  do
-  numeros[$i] = rand(100) + 1
-  printf "│%4d ",  numeros[$i]
-  $i +=1
+while i < num
+  numeros[i] = rand(100) + 1
+  printf "│%4d ",  numeros[i]
+  i +=1
 end
 
-print "│\n└────────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴"
-puts "─────┴─────┴─────┴─────┴─────┴─────┴─────┘"
+=begin
 
-# Verifica si el número es primo o no
+Otro tipo de bucle -->
 
-$j = 0
+20.times do |i|
+  numeros[i] = rand(100) + 1
+  printf "│%4d ",  numeros[i]
+  i +=1
+end
 
-$p = 0
-$nP = 0
+=end
 
-while $j < $num  do
+
+j = 0
+p = 0
+nP = 0
+cont = 0
+
+while j < num
   
-  $primo = true
-  $n = 2
-  while $n < numeros[$j]  do
-    if numeros[$j] % $n == 0
-      $primo = false
+  primo = true
+  n = 2
+
+  while n < numeros[j]
+    if numeros[j] % n == 0
+      primo = false
     end
-    $n +=1
+    n +=1
   end
     
-  if  numeros[$j] <= 1
-    $primo = false
+  if  numeros[j] <= 1
+    primo = false
   end
   
-  # Si el resultado es que el número es primo lo guarda en el array correspondiente, y al resto (no primos) los almacena también en su propio Array
   
-  if $primo
-    numPrimos[$p] = numeros[$j]
-    $p +=1
+  if primo
+    numPrimos[p] = numeros[j]
+    p += 1
+    cont += 1
   else
-    numNoPrimos[$nP] = numeros[$j]
-    $nP +=1
+    numNoPrimos[nP] = numeros[j]
+    nP += 1
   end
   
-  $j +=1
+  j +=1
+
 end
 
+puts ""
 
-# Sobreescribe el array de los numeros primos y posteriormente el array de los no primos sobre el array original
+k = 0
 
-$k = 0
-
-while $k < $p  do
-  numeros[$k] = numPrimos[$k]
-  $k +=1
+while k < p
+  numeros[k] = numPrimos[k]
+  k += 1
 end
 
-$l = 0
+l = 0
 
-while $p < $num  do
-  numeros[$p] = numNoPrimos[$l]
-  $l +=1
-  $p +=1
+while p < num
+  numeros[p] = numNoPrimos[l]
+  l += 1
+  p += 1
 end
 
-$m = 0
+m = 0
 
-# Saca por pantalla el nuevo array, que contiene la clasificación
+printf "\nLos primeros %d números son primos: \n" , cont
+puts ""
 
-$indice = 0;
-
-puts "\nArray Final".bold.underline
-print "┌────────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬"
-puts "─────┬─────┬─────┬─────┬─────┬─────┬─────┐"
-print "│ Indice "
-
-while $indice < $num  do
-  printf "│%4d ", $indice
-  $indice +=1
+while m < num/2
+  if cont >= 0
+    printf "│P%5d ", numeros[m]
+    cont-=1
+  else
+    printf "│%6d ", numeros[m]
+  end
+  m +=1
 end
 
-print "│\n├────────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼"
-puts "─────┼─────┼─────┼─────┼─────┼─────┼─────┤"
-print "│ Valor  "
+puts ""
 
-while $m < $num  do
-  printf "│%4d ",  numeros[$m]
-  $m +=1
+while m < num
+  if cont >= 0
+    printf "│P%5d ", numeros[m]
+    cont-=1
+  else
+    printf "│%6d ", numeros[m]
+  end
+  m +=1
 end
 
-print "│\n└────────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴"
-puts "─────┴─────┴─────┴─────┴─────┴─────┴─────┘"
+puts ""
+puts ""
 ```
 
 ## Presentación de resultados
